@@ -69,9 +69,9 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 32px;
+  border-radius: 30px;
 }
 .game_clice {
-  border-radius: 5px;
   background-image: url(img/game1.png);
 }
 .game_clice_two {
@@ -79,4 +79,36 @@
 }
 .game_clice_three {
   background-image: url(img/game3.png);
+}
+
+@media (max-width: 765px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header_welcome {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .header_text {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game_img {
+    width: 343px;
+    height: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */
