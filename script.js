@@ -1,4 +1,4 @@
-let a = 20;
+/*let a = 20;
 alert(a);
 
 let firstIphone = 2007;

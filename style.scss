@@ -76,5 +76,21 @@
         }
     }
 }
+.time{
+    background-color: rgba(0, 9, 21, 1);
+    &_in{
+        padding-top: 233.5px;
+        &_year{
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+        }
+        &_text{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+}
 
 @import 'mobile'
