@@ -78,17 +78,36 @@
 }
 .time{
     background-color: rgba(0, 9, 21, 1);
+    padding-top: 233.5px;
+    padding-bottom: 282px;
+    display: flex;
+    flex-direction: row;
     &_in{
-        padding-top: 233.5px;
+        width: 584px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
         &_year{
             font-weight: 700;
             font-size: 48px;
             line-height: 59px;
+            color: #FFFFFF;
         }
         &_text{
             font-weight: 300;
             font-size: 18px;
             line-height: 32px;
+            color: #FFFFFF;
+        }
+        &_play{
+            margin: 0;
+        }
+    }
+    &_img{
+        padding-left: 138px;
+        &_mobile{
+            display: none;
         }
     }
 }
