@@ -31,4 +31,29 @@
             
         }
     }
+    .time{
+        flex-direction: column;
+        &_in{
+            width: 100%;
+            align-items: center;
+            &_year{
+                font-size: 32px;
+                line-height: 39px;
+            }
+            &_text{
+                text-align: center;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        &_img{
+            display: none;
+            &_mobile{
+                display: flex;
+                padding-top: 64px;
+                padding-left: 0;
+                justify-content: center;
+            }
+        }
+    }
 }

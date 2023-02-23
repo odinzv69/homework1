@@ -45,6 +45,10 @@
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }
 }
 .game{
     background: #000915;
@@ -65,6 +69,10 @@
         flex-direction: column-reverse;
         gap: 32px;
         border-radius: 30px;
+        transition: all 0.5s;
+        &:hover{
+            transform: scale(1.07);
+        }
     }
     &_clice{
         background-image: url(img/game1.png);
@@ -73,6 +81,41 @@
         }
         &_three{
             background-image: url(img/game3.png);
+        }
+    }
+}
+.time{
+    background-color: rgba(0, 9, 21, 1);
+    padding-top: 233.5px;
+    padding-bottom: 282px;
+    display: flex;
+    flex-direction: row;
+    &_in{
+        width: 584px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        &_year{
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: #FFFFFF;
+        }
+        &_text{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+            color: #FFFFFF;
+        }
+        &_play{
+            margin: 0;
+        }
+    }
+    &_img{
+        padding-left: 138px;
+        &_mobile{
+            display: none;
         }
     }
 }

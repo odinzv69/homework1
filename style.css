@@ -48,6 +48,10 @@
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+  transition: all 0.5s;
+}
+.subscribe:hover {
+  transform: scale(1.2);
 }
 
 .game {
@@ -70,6 +74,10 @@
   flex-direction: column-reverse;
   gap: 32px;
   border-radius: 30px;
+  transition: all 0.5s;
+}
+.game_img:hover {
+  transform: scale(1.07);
 }
 .game_clice {
   background-image: url(img/game1.png);
@@ -79,6 +87,42 @@
 }
 .game_clice_three {
   background-image: url(img/game3.png);
+}
+
+.time {
+  background-color: rgb(0, 9, 21);
+  padding-top: 233.5px;
+  padding-bottom: 282px;
+  display: flex;
+  flex-direction: row;
+}
+.time_in {
+  width: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.time_in_year {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+.time_in_text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.time_in_play {
+  margin: 0;
+}
+.time_img {
+  padding-left: 138px;
+}
+.time_img_mobile {
+  display: none;
 }
 
 @media (max-width: 765px) {
@@ -110,5 +154,30 @@
   .game_img {
     width: 343px;
     height: 300px;
+  }
+  .time {
+    flex-direction: column;
+  }
+  .time_in {
+    width: 100%;
+    align-items: center;
+  }
+  .time_in_year {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .time_in_text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .time_img {
+    display: none;
+  }
+  .time_img_mobile {
+    display: flex;
+    padding-top: 64px;
+    padding-left: 0;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */
