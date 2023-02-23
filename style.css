@@ -48,6 +48,10 @@
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+  transition: all 0.5s;
+}
+.subscribe:hover {
+  transform: scale(1.2);
 }
 
 .game {
@@ -70,6 +74,10 @@
   flex-direction: column-reverse;
   gap: 32px;
   border-radius: 30px;
+  transition: all 0.5s;
+}
+.game_img:hover {
+  transform: scale(1.07);
 }
 .game_clice {
   background-image: url(img/game1.png);
