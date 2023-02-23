@@ -44,7 +44,7 @@ let info = prompt('Какую информацию хотите узнать о 
 alert(user[info]);
 
 let admin= String(prompt('Введите ваше имя'));
- alert(`Привет, ${admin} !`); */
+ alert(`Привет, ${admin} !`); 
 
   let password = prompt('Введите пароль');
  if (password === 'домашка') {
@@ -137,4 +137,4 @@ switch (monthNumber) {
    isNaN (clientOS)){
       alert('Ощибка');
    } else + clientOS==1   ? alert ('Установите программу для Android по Ссылке') :
-                            alert (' Установите программу на IOS по Ссылке')
+                            alert (' Установите программу на IOS по Ссылке');*/
