@@ -138,3 +138,40 @@ switch (monthNumber) {
       alert('Ощибка');
    } else + clientOS==1   ? alert ('Установите программу для Android по Ссылке') :
                             alert (' Установите программу на IOS по Ссылке');*/
+ let hello = 0;
+ while (hello < 2) {
+    console.log('Привет');
+    hello++;
+  };
+ 
+  let five = 1;
+  while (five <= 5) {
+    console.log(five);
+    five++;
+  };
+ 
+  let two = 7;
+    while (two <= 22) {
+        console.log(two);
+       two++;
+  };
+   
+    const obj = {
+      'Коля': '200',
+     'Вася': '300',
+      'Петя': '400'
+  }
+   
+    for (let key in obj){
+       console.log(`${key} — зарплата ${obj[key]} долларов`);
+ }
+   
+   iteration_num = 0;
+   for(let n = 1000;n > 50; n /= 2){
+       console.log(iteration_num)
+       iteration_num++;
+ }
+   
+   for (let fri = 5; fri <= 31; fri += 7){
+       alert(`Cегодня пятница, ${fri}-ое число. Необходимо подготовить отчет.`)
+ }
