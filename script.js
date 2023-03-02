@@ -116,6 +116,7 @@ switch (monthNumber) {
       break;
    default: alert('Такого месяца нету)')
 }
+
  let g = 2
  let scin = prompt ('Пожалуйста, введите любое число')
  let t = scin%g
@@ -174,7 +175,7 @@ switch (monthNumber) {
 
    for (let fri = 5; fri <= 31; fri += 7){
        alert(`Cегодня пятница, ${fri}-ое число. Необходимо подготовить отчет.`)
- }*/
+ }
 
  function min  () {
    let a = Number(prompt('Введите первую цифру'))
@@ -246,4 +247,77 @@ function cube() {
       alert('Переданный параметр не является числом')
    }
 }
-cube()
+cube()*/
+
+function Numberes() {
+let monthNumber = (prompt('напиши номер месяц'))
+switch (monthNumber) {
+   case '1' : 
+      alert('зима');
+      return (yesno());
+      break;
+   case '2':
+      alert('зима');
+      return (yesno());
+      break;   
+   case '3':
+      alert('весна');
+      return (yesno());
+      break;   
+   case '4':
+      alert('весна');
+      return (yesno());
+      break;   
+   case '5':
+      alert('весна');
+      return (yesno());
+      break;   
+   case '6':
+      alert('лето');
+      return (yesno());
+      break;   
+   case '7':
+      alert('лето');
+      return (yesno());
+      break;   
+   case '8':
+      alert('лето');
+      return (yesno());
+      break;   
+   case '9':
+      alert('осень');
+      return (yesno());
+      break;   
+   case '10':
+      alert('осень');
+      return (yesno());
+      break;   
+   case '11':
+      alert('осень');
+      return (yesno());
+      break;   
+   case '12':
+      alert('зима');
+      return (yesno());
+      break;
+   default: alert('ты ввел не число!');
+   return (noyes());
+}
+}
+function noyes() {
+   let a = confirm('Хочешь продолжить игру?')
+   if (a === true) {
+      return (Numberes())
+   } else {
+      alert ('Тогда хорошего дня, жду тебя снова!')
+   }
+}
+
+function yesno() {
+   let a = confirm('Молодец! Хочешь продолжить игру?')
+   if (a === true) {
+      return (Numberes())
+   } else {
+      alert ('Тогда хорошего дня, жду тебя снова!')
+   }
+}
