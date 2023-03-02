@@ -175,3 +175,75 @@ switch (monthNumber) {
    for (let fri = 5; fri <= 31; fri += 7){
        alert(`Cегодня пятница, ${fri}-ое число. Необходимо подготовить отчет.`)
  }*/
+
+ function min  () {
+   let a = Number(prompt('Введите первую цифру'))
+   let b = Number(prompt('Введите вторую цифру'))
+   if (a > b) {
+      alert(b)      
+   } else if (a < b) {
+      alert(a)
+   } else {
+      alert('это не цифра')
+   }
+}
+min()
+
+function big() {
+   let min = Number(prompt('введите цифру'))
+   if (min % 2 == 0) {
+      alert('Четное число')
+   } else if (min % 2 == 1){
+      alert('Нечетное число')
+   } else {
+      alert('это не число')
+   }
+}
+big();
+
+function square () {
+   let a = Number(prompt('введите цифру'))
+   console.log(a**2)
+}
+square()
+
+function root () {
+   let a = Number(prompt('введите цифру'))
+   console.log(Math.sqrt(a))
+}
+root()
+
+function time() {
+   let a = Number(prompt('Сколько тебе лет?'))
+   if (a < 0) {
+      alert('Вы ввели неправильное значение')
+   } else if (a >= 0 && a <= 12) {
+      alert('Привет, друг!')
+   } else if (a >= 13) {
+      alert('Добро пожаловать!')
+   } else {
+      alert('Вы ввели циру не так(')
+   }
+}
+time()
+
+function examination() {
+   let a = Number(prompt('Введите первую цифру'))
+   let b = Number(prompt('Введите вторую цифру'))
+   if (isNaN(a) == true|| isNaN(b) == true) {
+      alert('Одно или оба значения не являются числом')
+   } else {
+      alert(a * b)
+   }
+}
+examination()
+
+function cube() {
+   let a = Number(prompt('Введите число'))
+   if (isNaN(a) == false) {
+      alert(`n в кубе равняется ${a**2}`)
+   } else {
+      alert('Переданный параметр не является числом')
+   }
+}
+cube()
