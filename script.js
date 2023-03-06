@@ -322,3 +322,61 @@ function yesno() {
    }
 }
 
+const n = [1, 5, 4, 10, 0, 3];
+for (let i = -1; i < n.length; i++) {
+	if (n[i] === 10) break;
+	console.log(n[i + 1]);
+};
+
+const b = [1, 5, 4, 10, 0, 3];
+console.log(b.indexOf(4));
+
+let x = [1, 3, 5, 10, 20];
+x = x.join(' ');
+console.log(x);
+
+const z = [
+   [1, 1, 1],
+   [1, 1, 1],
+   [1, 1, 1]
+]
+console.log(z);
+
+const v = [1, 1, 1];
+v.push(2, 2, 2)
+console.log(v);
+
+let e = [9, 8, 7, 'a', 6, 5];
+e = e.sort()
+console.log(e.pop())
+console.log(e);
+
+let k = (prompt('введите цифру'))
+const t = [9, 8, 7, 6, 5];
+for (let i = 0; i < n.length; i++) {
+   if (t[i] == k) {
+   alert('подходит')
+   } else {
+      console.log('неподходит')
+   }
+}
+
+let u = 'abcdef';
+u = u.split('')
+u = u.reverse()
+u = u.join('')
+console.log(u);
+
+let o = [
+   [1, 2, 3,],
+   [4, 5, 6]
+]
+let r = [',']
+o = o.join([r])
+console.log(o)
+
+let p = [9, 5, 6, 3, 1]
+for (let i = 0; i < p.length; i++) {
+   if (tax = p.map(el => el + p[i+1]))
+   console.log(tax[i])
+}
