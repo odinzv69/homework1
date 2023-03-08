@@ -322,7 +322,7 @@ function yesno() {
    }
 }
 
-const n = [1, 5, 4, 10, 0, 3];
+/*const n = [1, 5, 4, 10, 0, 3];
 for (let i = -1; i < n.length; i++) {
 	if (n[i] === 10) break;
 	console.log(n[i + 1]);
@@ -379,4 +379,152 @@ let p = [9, 5, 6, 3, 1]
 for (let i = 0; i < p.length; i++) {
    if (tax = p.map(el => el + p[i+1]))
    console.log(tax[i])
+}*/
+
+/*homework 7*/
+
+let answer = 'js';
+console.log(answer.toUpperCase());
+
+function regulars() {
+const regular = ['audi', 'bmw', 'mersedes', 'lada', 'bently']
+const search = 'b';
+
+regular.forEach((regular) => {
+   if (regular.toLowerCase().startsWith(search.toLowerCase())) {
+      console.log(regular);
+   }
+})
 }
+regulars()
+
+let num = 32.58884;
+console.log(Math.floor(num))
+console.log(Math.ceil(num))
+console.log(Math.round(num))
+
+const numb = [52, 53, 49, 77, 21, 32];
+let max = Math.max.apply(null, numb);
+console.log(max)
+let min = Math.min.apply(null, numb);
+console.log(min)
+
+console.log(Math.round(Math.random() * 10));
+
+function getRandomArrNumbers(randomNumber) {
+   let sixthArray = [];
+   let arrLength = Math.floor(randomNumber / 2)
+   for (let i = 0; i < arrLength; i++) {
+       sixthArray.push(Math.round(Math.random() * randomNumber));
+   }
+   console.log(sixthArray);
+}
+/*getRandomArrNumbers(Number(prompt('Введите любое число')));*/
+
+let seventhRandomValue = (maxValue, minValue) => {
+   let seventhRandomResult = Math.round(Math.random() * (maxValue - minValue) + minValue);
+   console.log(seventhRandomResult);
+}
+/*seventhRandomValue(Number(prompt('Введите любое число')), Number(prompt('Введите любое число, значение которого меньше, чем у первого числа')));*/
+
+let currentDate = new Date();
+console.log(currentDate);
+
+let date = new Date(2023, 3, 30, 12, 45, 50, 9);
+date.setDate (30 + 73);
+console.log(date);
+
+function data() {
+   let regexp = /[0-9]/
+   let rEgexp = /[0-9]{4}/
+   let Regexp = /^[а-яА-Я]*$/
+   let day = (prompt('Введите день месяца'))
+      if(regexp.exec(day) && day <= 31) {
+         console.log(1)
+      } else {
+         alert('Введено не верно')
+         return (data());
+      }
+   let month = (prompt('Введите месяц'))
+      month = month.toLocaleLowerCase();
+      switch (month) {
+      case 'январь' : ;
+         break;
+      case 'февраль':;
+         break;   
+      case 'март':;
+         break;   
+      case 'апрель':;
+         break;   
+      case 'май':;
+         break;   
+      case 'июнь':;
+         break;   
+      case 'июль':;
+         break;   
+      case 'август':;
+         break;   
+      case 'сентябрь':;
+         break;   
+      case 'октябрь':;
+         break;   
+      case 'ноябрь':;
+         break;   
+      case 'декабрь':;
+         break;
+      default: alert('Такого месяца нету)') 
+      return (data());
+      }
+   let age = (prompt('Введите год'))
+      if (rEgexp.exec(age)) {
+         console.log(1)
+      } else {
+         alert('Год введен неверно')
+         return data()
+      }
+   let week = (prompt('Введите день недели'))
+         week = week.toLocaleLowerCase();
+         switch (week) {
+         case 'понедельник' : ;
+            break;
+         case 'вторник':;
+            break;   
+         case 'среда':;
+            break;   
+         case 'четверг':;
+            break;   
+         case 'пятница':;
+            break;   
+         case 'суббота':;
+            break;   
+         case 'воскресенье':;
+            break;   
+            default: alert('Такого дня недели нету)') 
+            return (data());
+         }       
+   let time = Number(prompt('Введеите часы')) 
+      if (regexp.exec(time) && time <= 24) {
+         console.log(1)
+      } else {
+         alert('часы введены неверно')
+         return data()
+      }
+   let minute = Number(prompt('Введеите минуты')) 
+      if (regexp.exec(minute) && minute <= 60) {
+         console.log(1)
+      } else {
+         alert('минуты введены неверно')
+         return data()
+      }
+   let sec = Number(prompt('Введеите секунды')) 
+      if (regexp.exec(sec) && sec <= 60) {
+         console.log(1)
+      } else {
+         alert('секунды введены неверно')
+         return data()
+      }
+   alert(`Дата: ${day} ${month} ${age} - это ${week}.
+   Время: ${time}:${minute}:${sec}`)
+}
+
+data()
