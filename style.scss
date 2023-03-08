@@ -123,5 +123,49 @@
         }
     }
 }
+.footer{
+    background-image: url(img/backgroundFooter.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px; 
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+        &_in{
+            width: 584px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 32px;
+        align-items: center;
+        &_year{
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: #FFFFFF;
+        }
+        &_text{
+            text-align: center;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+            color: #FFFFFF;
+        }
+    }
+}
+.downSite{
+    height: 80px;
+    background-color: rgba(0, 9, 21, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+}
 
 @import 'mobile'
