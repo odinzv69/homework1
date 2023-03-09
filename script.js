@@ -386,17 +386,16 @@ for (let i = 0; i < p.length; i++) {
 let answer = 'js';
 console.log(answer.toUpperCase());
 
-function regulars() {
-const regular = ['audi', 'bmw', 'mersedes', 'lada', 'bently']
-const search = 'b';
-
-regular.forEach((regular) => {
-   if (regular.toLowerCase().startsWith(search.toLowerCase())) {
-      console.log(regular);
+let resultArr = [];
+function regulars(regular, search) {
+regular.forEach(element => {
+   if (element.toLowerCase().startsWith(search.toLowerCase())) {
+      resultArr.push(element);
    }
-})
+});
+console.log(resultArr)
 }
-regulars()
+regulars(['audi', 'bmw', 'mersedes', 'lada', 'bently'], 'b')
 
 let num = 32.58884;
 console.log(Math.floor(num))
@@ -430,102 +429,19 @@ let seventhRandomValue = (maxValue, minValue) => {
 let currentDate = new Date();
 console.log(currentDate);
 
-let date = new Date(2023, 3, 30, 12, 45, 50, 9);
-date.setDate (30 + 73);
-console.log(date);
+let nineDate = new Date ("07 March 2023");
+nineDate.setDate(nineDate.getDate() + 73);
+console.log(nineDate);
 
-function data() {
-   let regexp = /[0-9]/
-   let rEgexp = /[0-9]{4}/
-   let Regexp = /^[а-яА-Я]*$/
-   let day = (prompt('Введите день месяца'))
-      if(regexp.exec(day) && day <= 31) {
-         console.log(1)
-      } else {
-         alert('Введено не верно')
-         return (data());
-      }
-   let month = (prompt('Введите месяц'))
-      month = month.toLocaleLowerCase();
-      switch (month) {
-      case 'январь' : ;
-         break;
-      case 'февраль':;
-         break;   
-      case 'март':;
-         break;   
-      case 'апрель':;
-         break;   
-      case 'май':;
-         break;   
-      case 'июнь':;
-         break;   
-      case 'июль':;
-         break;   
-      case 'август':;
-         break;   
-      case 'сентябрь':;
-         break;   
-      case 'октябрь':;
-         break;   
-      case 'ноябрь':;
-         break;   
-      case 'декабрь':;
-         break;
-      default: alert('Такого месяца нету)') 
-      return (data());
-      }
-   let age = (prompt('Введите год'))
-      if (rEgexp.exec(age)) {
-         console.log(1)
-      } else {
-         alert('Год введен неверно')
-         return data()
-      }
-   let week = (prompt('Введите день недели'))
-         week = week.toLocaleLowerCase();
-         switch (week) {
-         case 'понедельник' : ;
-            break;
-         case 'вторник':;
-            break;   
-         case 'среда':;
-            break;   
-         case 'четверг':;
-            break;   
-         case 'пятница':;
-            break;   
-         case 'суббота':;
-            break;   
-         case 'воскресенье':;
-            break;   
-            default: alert('Такого дня недели нету)') 
-            return (data());
-         }       
-   let time = Number(prompt('Введеите часы')) 
-      if (regexp.exec(time) && time <= 24) {
-         console.log(1)
-      } else {
-         alert('часы введены неверно')
-         return data()
-      }
-   let minute = Number(prompt('Введеите минуты')) 
-      if (regexp.exec(minute) && minute <= 60) {
-         console.log(1)
-      } else {
-         alert('минуты введены неверно')
-         return data()
-      }
-   let sec = Number(prompt('Введеите секунды')) 
-      if (regexp.exec(sec) && sec <= 60) {
-         console.log(1)
-      } else {
-         alert('секунды введены неверно')
-         return data()
-      }
-   alert(`Дата: ${day} ${month} ${age} - это ${week}.
-   Время: ${time}:${minute}:${sec}`)
+let tenthDate = new Date();
+function data(tenthDate) {
+   const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота",];
+   const month = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря",];
+   let date = tenthDate.getDate() + ' ' + month[tenthDate.getMonth()] + ' ' + tenthDate.getFullYear() + ' - это ' + days[tenthDate.getDay()] + ' ' + tenthDate.getHours() + ':' + tenthDate.getMinutes() + ':' + tenthDate.getSeconds();
+   console.log(date);
 }
+data(tenthDate)
+
 
 function game2() {
    let game = ['яблоко', 'груша', 'дыня', 'виноград', 'персик', 'апельсин', 'мандарин'];
