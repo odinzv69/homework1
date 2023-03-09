@@ -527,4 +527,34 @@ function data() {
    Время: ${time}:${minute}:${sec}`)
 }
 
-data()
+function game2() {
+   let game = ['яблоко', 'груша', 'дыня', 'виноград', 'персик', 'апельсин', 'мандарин'];
+   game = game.sort(() => Math.random() - 0.5);
+   alert(game)
+   let name = (prompt('Назови первый элемент списка'));
+   name = name.toLocaleLowerCase()
+   let name2 = (prompt('Назовите последний элемент списка'));
+   name2 = name2.toLocaleLowerCase()
+   if (name === game[0] && name2 === game[6]){
+      alert('Все верно)')
+      return (gameDop())
+   } else if (name === game[0]){
+      alert('Почти верно, можно и лучше!')
+      return (gameDop())
+   } else if (name2 === game[6]){
+      alert('Почти верно, можно и лучше!')
+      return (gameDop())
+   } else {
+      alert('Неправильно!')
+      return (gameDop())
+   }
+}
+function gameDop() {
+   let a = confirm('Хочешь продолжить игру?')
+   if (a === true) {
+      return (game2())
+   } else {
+      alert ('Тогда хорошего дня, жду тебя снова!')
+   }
+}
+
