@@ -175,6 +175,20 @@
   color: #FFFFFF;
 }
 
+@media (max-width: 870px) {
+  .time_img {
+    display: none;
+  }
+  .time_img_2 {
+    display: none;
+  }
+  .time_img_mobile {
+    display: flex;
+    padding-top: 0px;
+    padding-left: 0;
+    justify-content: center;
+  }
+}
 @media (max-width: 765px) {
   .center {
     padding-left: 16px;
@@ -223,18 +237,6 @@
     text-align: center;
     font-size: 14px;
     line-height: 22px;
-  }
-  .time_img {
-    display: none;
-  }
-  .time_img_2 {
-    display: none;
-  }
-  .time_img_mobile {
-    display: flex;
-    padding-top: 0px;
-    padding-left: 0;
-    justify-content: center;
   }
   .reverse {
     flex-direction: column-reverse;

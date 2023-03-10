@@ -252,54 +252,30 @@ cube()*/
 function Numberes() {
 let monthNumber = (prompt('напиши номер месяц'))
 switch (monthNumber) {
-   case '1' : 
-      alert('зима');
-      return (yesno());
-      break;
+   case '1': 
    case '2':
+   case '12':
       alert('зима');
       return (yesno());
       break;   
-   case '3':
-      alert('весна');
-      return (yesno());
-      break;   
-   case '4':
-      alert('весна');
-      return (yesno());
-      break;   
+   case '3': 
+   case '4':  
    case '5':
       alert('весна');
       return (yesno());
       break;   
-   case '6':
-      alert('лето');
-      return (yesno());
-      break;   
-   case '7':
-      alert('лето');
-      return (yesno());
-      break;   
+   case '6': 
+   case '7':  
    case '8':
       alert('лето');
       return (yesno());
       break;   
-   case '9':
-      alert('осень');
-      return (yesno());
-      break;   
-   case '10':
-      alert('осень');
-      return (yesno());
-      break;   
+   case '9':  
+   case '10': 
    case '11':
       alert('осень');
       return (yesno());
       break;   
-   case '12':
-      alert('зима');
-      return (yesno());
-      break;
    default: alert('ты ввел не число!');
    return (noyes());
 }

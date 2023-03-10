@@ -1,4 +1,19 @@
-
+@media (max-width: 870px){
+    .time{    
+        &_img{
+            &_2{
+                display: none;
+            }
+            display: none;
+            &_mobile{
+                display: flex;
+                padding-top: 0px;
+                padding-left: 0;
+                justify-content: center;
+            }
+        }
+        }
+    }
 
 @media (max-width: 765px){
     .center{
@@ -47,18 +62,6 @@
                 text-align: center;
                 font-size: 14px;
                 line-height: 22px;
-            }
-        }
-        &_img{
-            &_2{
-                display: none;
-            }
-            display: none;
-            &_mobile{
-                display: flex;
-                padding-top: 0px;
-                padding-left: 0;
-                justify-content: center;
             }
         }
     }
