@@ -405,7 +405,7 @@ let seventhRandomValue = (maxValue, minValue) => {
 let currentDate = new Date();
 console.log(currentDate);
 
-let nineDate = new Date ("07 March 2023");
+let nineDate = new Date ("12 March 2023");
 nineDate.setDate(nineDate.getDate() + 73);
 console.log(nineDate);
 
@@ -488,9 +488,9 @@ console.log(users);
 
 //задание 3
 
-function reverse(arr) {
-   const rac = arr.reverse();
-   console.log(rac)
+function reverse(arr1) {
+   const rac = arr1.reverse();
+   return arr1;
 }
 
 function stringOrNumber(arr) {
@@ -498,7 +498,7 @@ function stringOrNumber(arr) {
          arr[i] *= 1;
          if (isNaN(arr[i]) && arr.splice(i, 1));
       } 
-      console.log(arr) ;
+      return arr ;
    }
 
 
@@ -507,8 +507,14 @@ function each(arr, callback) {
 }
 
 const arr = [1, '4', false, 9, 'two'];
+const arr1 = [1, '4', 9, 'two'];
 
+each(arr1, reverse);
 each(arr, stringOrNumber);
+
+
+console.log(arr)
+console.log(arr1)
 
 //задание 4
 
