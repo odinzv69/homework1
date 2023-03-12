@@ -450,3 +450,103 @@ function gameDop() {
    }
 }
 
+//homework 8
+//задание 1
+
+function mult(getArr) {
+   const res = getArr.reduce((acc, rec) => acc * rec)
+   console.log(res)
+}
+
+function sum(getArr) {
+   const res = getArr.reduce((acc, rec) => acc + rec)
+   console.log(res)
+}
+
+
+function getNumberSumMult(getArr, callback) {
+   callback(getArr)
+}
+
+getNumberSumMult([3, 4, 1, 9], sum);
+
+//задание 2
+
+function numberOver(a, b) {
+	return a.age - b.age;
+};
+
+const users = [
+	{name: 'Jon', age: 22},
+	{name: 'Richard', age: 18},
+	{name: 'Anton', age: 32},
+	{name: 'Lida', age: 23},
+	{name: 'Bob', age: 44}
+];
+users.sort(numberOver);
+console.log(users);
+
+//задание 3
+
+function reverse(arr) {
+   const rac = arr.reverse();
+   console.log(rac)
+}
+
+function stringOrNumber(arr) {
+      for (let i = 0; i < arr.length; i++) {
+         arr[i] *= 1;
+         if (isNaN(arr[i]) && arr.splice(i, 1));
+      } 
+      console.log(arr) ;
+   }
+
+
+function each(arr, callback) {
+   callback(arr)
+}
+
+const arr = [1, '4', false, 9, 'two'];
+
+each(arr, stringOrNumber);
+
+//задание 4
+
+const timer = (deadline) => {
+
+   console.log(new Date());
+
+   let time = deadline;
+   const interval = setInterval(() => {
+       time -= 3;
+       console.log(new Date());
+   }, 3000);
+
+   setTimeout(() => {
+       clearInterval(interval);
+       console.log('30 секунд прошло')
+   }, deadline * 1000)
+};
+
+const deadline = 30;
+//timer(deadline);
+
+//задание 5
+
+function calling() {
+   console.log('Звоню!')
+};
+
+function beeps(callback) {
+   setTimeout(() => {
+       console.log('Идут гудки...')
+       callback()
+   }, 1000);
+}
+
+function talk() {
+   console.log('Разговор')
+}
+
+calling()
+beeps(talk);
