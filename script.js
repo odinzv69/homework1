@@ -252,54 +252,30 @@ cube()*/
 function Numberes() {
 let monthNumber = (prompt('напиши номер месяц'))
 switch (monthNumber) {
-   case '1' : 
-      alert('зима');
-      return (yesno());
-      break;
+   case '1': 
    case '2':
+   case '12':
       alert('зима');
       return (yesno());
       break;   
-   case '3':
-      alert('весна');
-      return (yesno());
-      break;   
-   case '4':
-      alert('весна');
-      return (yesno());
-      break;   
+   case '3': 
+   case '4':  
    case '5':
       alert('весна');
       return (yesno());
       break;   
-   case '6':
-      alert('лето');
-      return (yesno());
-      break;   
-   case '7':
-      alert('лето');
-      return (yesno());
-      break;   
+   case '6': 
+   case '7':  
    case '8':
       alert('лето');
       return (yesno());
       break;   
-   case '9':
-      alert('осень');
-      return (yesno());
-      break;   
-   case '10':
-      alert('осень');
-      return (yesno());
-      break;   
+   case '9':  
+   case '10': 
    case '11':
       alert('осень');
       return (yesno());
       break;   
-   case '12':
-      alert('зима');
-      return (yesno());
-      break;
    default: alert('ты ввел не число!');
    return (noyes());
 }
@@ -322,7 +298,7 @@ function yesno() {
    }
 }
 
-const n = [1, 5, 4, 10, 0, 3];
+/*const n = [1, 5, 4, 10, 0, 3];
 for (let i = -1; i < n.length; i++) {
 	if (n[i] === 10) break;
 	console.log(n[i + 1]);
@@ -379,4 +355,98 @@ let p = [9, 5, 6, 3, 1]
 for (let i = 0; i < p.length; i++) {
    if (tax = p.map(el => el + p[i+1]))
    console.log(tax[i])
+}*/
+
+/*homework 7*/
+
+let answer = 'js';
+console.log(answer.toUpperCase());
+
+let resultArr = [];
+function regulars(regular, search) {
+regular.forEach(element => {
+   if (element.toLowerCase().startsWith(search.toLowerCase())) {
+      resultArr.push(element);
+   }
+});
+console.log(resultArr)
 }
+regulars(['audi', 'bmw', 'mersedes', 'lada', 'bently'], 'b')
+
+let num = 32.58884;
+console.log(Math.floor(num))
+console.log(Math.ceil(num))
+console.log(Math.round(num))
+
+const numb = [52, 53, 49, 77, 21, 32];
+let max = Math.max.apply(null, numb);
+console.log(max)
+let min = Math.min.apply(null, numb);
+console.log(min)
+
+console.log(Math.round(Math.random() * 10));
+
+function getRandomArrNumbers(randomNumber) {
+   let sixthArray = [];
+   let arrLength = Math.floor(randomNumber / 2)
+   for (let i = 0; i < arrLength; i++) {
+       sixthArray.push(Math.round(Math.random() * randomNumber));
+   }
+   console.log(sixthArray);
+}
+/*getRandomArrNumbers(Number(prompt('Введите любое число')));*/
+
+let seventhRandomValue = (maxValue, minValue) => {
+   let seventhRandomResult = Math.round(Math.random() * (maxValue - minValue) + minValue);
+   console.log(seventhRandomResult);
+}
+/*seventhRandomValue(Number(prompt('Введите любое число')), Number(prompt('Введите любое число, значение которого меньше, чем у первого числа')));*/
+
+let currentDate = new Date();
+console.log(currentDate);
+
+let nineDate = new Date ("07 March 2023");
+nineDate.setDate(nineDate.getDate() + 73);
+console.log(nineDate);
+
+let tenthDate = new Date();
+function data(tenthDate) {
+   const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота",];
+   const month = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря",];
+   let date = tenthDate.getDate() + ' ' + month[tenthDate.getMonth()] + ' ' + tenthDate.getFullYear() + ' - это ' + days[tenthDate.getDay()] + ' ' + tenthDate.getHours() + ':' + tenthDate.getMinutes() + ':' + tenthDate.getSeconds();
+   console.log(date);
+}
+data(tenthDate)
+
+
+function game2() {
+   let game = ['яблоко', 'груша', 'дыня', 'виноград', 'персик', 'апельсин', 'мандарин'];
+   game = game.sort(() => Math.random() - 0.5);
+   alert(game)
+   let name = (prompt('Назови первый элемент списка'));
+   name = name.toLocaleLowerCase()
+   let name2 = (prompt('Назовите последний элемент списка'));
+   name2 = name2.toLocaleLowerCase()
+   if (name === game[0] && name2 === game[6]){
+      alert('Все верно)')
+      return (gameDop())
+   } else if (name === game[0]){
+      alert('Почти верно, можно и лучше!')
+      return (gameDop())
+   } else if (name2 === game[6]){
+      alert('Почти верно, можно и лучше!')
+      return (gameDop())
+   } else {
+      alert('Неправильно!')
+      return (gameDop())
+   }
+}
+function gameDop() {
+   let a = confirm('Хочешь продолжить игру?')
+   if (a === true) {
+      return (game2())
+   } else {
+      alert ('Тогда хорошего дня, жду тебя снова!')
+   }
+}
+
